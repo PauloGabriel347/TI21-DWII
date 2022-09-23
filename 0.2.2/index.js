@@ -1,4 +1,4 @@
-const Blog = {
+const blog = {
  usuario = {
   nome: 'Ze de oliveira',
   idade: 25,
