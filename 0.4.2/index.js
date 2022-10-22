@@ -22,7 +22,7 @@ const alunos = [
   },
 ];
 
-const calculoMedia = alunos.map(function (aluno) {
+const calculoMedia = alunos.map((aluno) => {
   const mediaGeral = aluno.notas.reduce((acumulador, aluno) => {
     return acumulador + aluno.nota;
   }, 0);
