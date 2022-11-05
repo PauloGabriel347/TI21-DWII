@@ -8,9 +8,8 @@ const Personagens = (props) => {
     'Leon S. Kennedy',
     'Albert Wesker',
   ];
-
+  var filtro = /(redfield)/i;
   const FamiliaFiltro = personagens.filter((personagem) => {
-    var filtro = /(redfield)/i;
     const Familia = personagem.match(filtro);
     return Familia;
   });
@@ -21,9 +20,11 @@ const Personagens = (props) => {
     <div>
       <h3>Personagens de Resident Evil</h3>
       <ul>
-        {personagens.map((personagem) => (
-          <li>{personagem}</li>
-        ))}
+        {personagens
+          .filter((personagem) => personagem.match(filtro))
+          .map((personagem) => (
+            <li>{personagem}</li>
+          ))}
       </ul>
     </div>
   );
